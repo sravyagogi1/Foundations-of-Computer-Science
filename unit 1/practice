@@ -1,0 +1,27 @@
+def is_special(n):
+    if n % 3 == 0:
+        return False
+    if n % 4 == 0:
+        return False
+    if n % 5 == 0:
+        return False
+    if n % 2 == 1:
+        return False
+    else:
+        return True
+print (is_special(24))
+
+def count_special(a,b):
+    count = 0
+    if a == b + 1:
+        return count
+    if a % 3 == 0:
+        if a % 4 == 0:
+            if a % 5 == 0:
+                if a % 2 == 0:
+                    count += 1
+    return count + count_special(a+1,b)
+                
+print (count_special(0,5))
+print (count_special(10,16))
+print (count_special(22,50))

@@ -1,0 +1,27 @@
+def num_of_div(x,y):
+    count = 0
+    if x==y+1:
+        return count
+    if x % 2 == 0:
+        count += 1
+    if x % 3 == 0:
+        count += 1
+    if x % 5 == 0:
+        count += 1
+    if x % 7 == 0:
+        count +=1
+        
+    return count + num_of_div(x+1,y)
+    
+
+def num_of_divi(x):
+    count = 0 
+    if x % 2 == 0:
+        count += 1
+    if x % 3 == 0:
+        count += 1
+    if x % 5 == 0:
+        count += 1
+    if x % 7 == 0:
+        count +=1
+    return count
